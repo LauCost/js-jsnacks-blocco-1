@@ -1,20 +1,27 @@
-let play = true
+let play = true;
 
-let i = 1
+//Variabile utilizzata per chiudere il ciclo
+let i = 1;
 
-let risultato = document.querySelector("h1")
+//Variabile somma che partirà da 0
+var x = 0
+
+let risultato = document.querySelector("h1");
 
 while (play) {
 
 
-    let numero = prompt(`Inserisci il ${i}° numero`);
+    let numero = Number(prompt(`Inserisci il ${i}° numero`));
+
+    var x = x + numero;
 
     i++
 
-    if (i == 10) {
+    //Chiude il ciclo
+    if (i == 11) {
         play = false;
 
-        console.log(numero);
+        risultato.innerHTML = `La somma dei numeri da te scelto è: ${x}`;
 
     }
 }
